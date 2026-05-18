@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ dados.nome }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>{{ dados.nome }}</h1>
+        <h2>{{ dados.cargo }}</h2>
+
+        <p>{{ dados.email }}</p>
+        <p>{{ dados.telefone }}</p>
+        <p>{{ dados.linkedin }}</p>
+        <p>{{ dados.github }}</p>
+    </header>
+
+    <section>
+        <h3>Resumo</h3>
+        <p>{{ dados.resumo }}</p>
+    </section>
+
+    <section>
+        <h3>Experiência</h3>
+
+        {% for exp in dados.experiencias %}
+            <div class="job">
+                <h4>{{ exp.cargo }}</h4>
+                <strong>{{ exp.empresa }}</strong>
+                <p>{{ exp.periodo }}</p>
+                <p>{{ exp.descricao }}</p>
+            </div>
+        {% endfor %}
+    </section>
+
+    <section>
+        <h3>Habilidades</h3>
+
+        <ul>
+            {% for habilidade in dados.habilidades %}
+                <li>{{ habilidade }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+</div>
+
+</body>
+</html>
