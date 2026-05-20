@@ -1,0 +1,48 @@
+body{
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: #151825;
+    color: rgb(99, 210, 27);
+    
+}
+
+#Teste{background-color: #183438;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10vh;
+    
+    
+}
+#Teste a {
+    text-decoration: none;    
+    color: rgb(99, 210, 27);          
+    font-weight: bold;        
+}
+
+#Teste a:hover {
+    color: rgb(132, 196, 165);         
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    align-items: center;
+}
+
+
+.menu ul {
+    list-style-type: nome;
+    padding: 0;
+}
+
+
+.menu ul li a {
+    text-decoration: nome;
+    color: white;
+    display: block;
+    padding: 10px 0;
+
+}
